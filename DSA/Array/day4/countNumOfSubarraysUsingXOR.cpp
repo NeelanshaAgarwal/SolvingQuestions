@@ -37,7 +37,7 @@ int subarraysWithXorK(vector<int> a, int k) {
             xorr = xorr ^ a[j];
 
             // step 3:check XOR and count:
-            if (xorr == k) cnt++;
+            if (xorr == k) cnt++;                                               
         }
     }
     return cnt;
