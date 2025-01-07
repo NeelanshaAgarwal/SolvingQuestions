@@ -18,14 +18,14 @@ class Solution {
 
     void sortStack(stack < int > & s) {
 
-        if(stak.empty()){
+        if(s.empty()){
             return;
         }
 
-        int temp = stak.top();
-        stak.pop();
-        sortStack(stak);
-        sortedInsert(stak, temp);
+        int temp = s.top();
+        s.pop();
+        sortStack(s);
+        sortedInsert(s, temp);
 
       /*stack < int > temp;
       while (!s.empty()) {
