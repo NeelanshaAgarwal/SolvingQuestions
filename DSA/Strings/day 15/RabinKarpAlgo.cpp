@@ -90,3 +90,55 @@ int main() {
     rabinKarp(text, pattern, q);
     return 0;
 }
+
+
+// leetcode problem 686 solution
+
+/*
+class Solution {
+private:
+    const int base = 1000000;
+    const int d = 31;
+public:
+    int repeatedStringMatch(string a, string b) {
+        if(a==b) return 1;
+        int count = 1;
+        string source = a;
+
+        while(source.size()<b.size()){
+            count++;
+            source+=a;
+        }
+        if(source == b) return count;
+        if(Rabin_Karp(source, b) != -1) return count;
+        if(Rabin_Karp(source + a, b) != -1) return count + 1;
+        return -1;
+    }
+
+    int Rabin_Karp(string source, string target) {
+        if(source.empty()||target.empty()) return -1;
+        int n = source.size();
+        int m = target.size();
+        int s = 0, t = 0, h = 1;
+        for(int i=0;i<m;i++){
+            h=(h*d)%base;
+        }
+        for(int i=0;i<m;i++){
+            t = (d*t+target[i])%base;
+        }
+        for(int i=0;i<n;i++){
+            s = (d*s+source[i])%base;
+            if(i<m-1) continue;
+            if(i>=m){
+                s = (s-source[i-m]*h)%base;
+            }
+            if(s<0)
+                s+=base;
+            if(s == t){
+                if(source.substr(i-m+1,m) == target) return i-m+1;
+            }
+        }
+        return -1;
+    }
+};
+*/
