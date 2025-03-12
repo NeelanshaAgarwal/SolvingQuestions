@@ -27,26 +27,3 @@ int main(){
     return 0;
 }
 
-// leetcode problem 28
-
-/*class Solution {
-    public:
-        int strStr(string haystack, string needle) {
-            string s = needle + '#' + haystack;
-            int n = s.size(), n1 = needle.size(), n2=haystack.size() ;
-            int i=0,j=-1,kmp[n+1],pos=-1;
-            kmp[0]=-1;
-            while(i<n){
-                while(j!=-1 && s[i]!=s[j]){
-                    j = kmp[j];
-                }
-                j++;i++;
-                kmp[i]=j;
-                if(kmp[i]==n1){
-                    pos = i-2*n1-1;
-                    break;
-                }
-            }
-            return pos;
-        }
-    };*/
